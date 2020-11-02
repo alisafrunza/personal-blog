@@ -33,7 +33,7 @@ const LandingBio = () => (
         site {
           siteMetadata {
             title
-            subtitle
+            description
           }
         }
       }
@@ -42,7 +42,7 @@ const LandingBio = () => (
       <OuterContainer>
         <Container>
           <NameHeader>{data.site.siteMetadata.title}</NameHeader>
-          <Description>{data.site.siteMetadata.subtitle}</Description>
+          <Description>{data.site.siteMetadata.description}</Description>
         </Container>
       </OuterContainer>
     )}
