@@ -18,6 +18,9 @@ const Content = styled.div`
   max-width: 860px;
   padding: 0 1.0875rem 1rem;
   padding-top: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 `
 
 const GatsbyLink = styled.a`
@@ -42,9 +45,13 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
         <Content>
-          <main>{children}</main>
+          <Header siteTitle={data.site.siteMetadata.title} />
+
+          <div style={{flexGrow: 1}}>
+            <main>{children}</main>
+          </div>
+
           <Footer>
             <p>
             © {new Date().getFullYear()} by {data.site.siteMetadata.title}, Built with
@@ -52,6 +59,7 @@ const Layout = ({ children }) => (
             </p>
             <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
           </Footer>
+
         </Content>
       </>
     )}
