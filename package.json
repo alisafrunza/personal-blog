@@ -30,7 +30,8 @@
     "typeface-nunito": "1.1.3"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "react-kawaii": "^0.16.0"
   },
   "keywords": [
     "gatsby"
