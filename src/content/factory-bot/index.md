@@ -1,5 +1,6 @@
 ---
 title: Create factories without using ActiveRecord
+description: Find out how to create FactoryBot factories in a ruby app that does not have a database connection.
 date: "2020-11-04"
 tags: [ruby, rspec, factory-bot]
 draft: false
