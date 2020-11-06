@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "@emotion/styled"
 
 import Layout from "../components/layout"
@@ -25,7 +24,6 @@ const NotFoundPage = () => (
     <OuterContainer>
       <h1>Not Found</h1>
       <p>You just hit a route that doesn&#39;t exist.</p>
-      <p><Link to="/">Go to the home page.</Link></p>
       <Ghost size={200} mood="shocked" color={color} />
     </OuterContainer>
   </Layout>
