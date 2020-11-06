@@ -25,10 +25,14 @@ const Content = styled.div`
 
 const TagsLink = styled(Link)`
   color: black;
-  margin: 25px 0 25px;
+  margin: 30px 0 0 0;
   text-decoration: none;
   display: inline-block;
   position: relative;
+`
+
+const TitleLink = styled(TagsLink)`
+  font-size: 1.3rem;
 `
 
 const MenuLink = styled(TagsLink)`
@@ -57,6 +61,16 @@ const List = styled.ul`
 
 const TagsList = styled.li`
   list-style-type: none;
+  margin-bottom: 0;
+`
+
+const ArticleDate = styled.h5`
+  display: inline;
+  color: #606060;
+`
+const ReadingTime = styled.h5`
+  display: inline;
+  color: #606060;
 `
 
 const Tags = ({ pageContext, data }) => {
@@ -75,11 +89,15 @@ const Tags = ({ pageContext, data }) => {
         <MarkedHeader>{tagHeader}</MarkedHeader>
         <List>
           {edges.map(({ node }) => {
-            const { slug } = node.fields
-            const { title } = node.frontmatter
+            const { slug, readingTime } = node.fields
+            const { title, date, path } = node.frontmatter
             return (
               <TagsList key={slug}>
-                <TagsLink to={node.frontmatter.path}>{title}</TagsLink>
+                <TitleLink to={path}>{title}</TitleLink>
+                <div>
+                  <ArticleDate>{date}</ArticleDate>
+                  <ReadingTime> - {readingTime.text}</ReadingTime>
+                </div>
               </TagsList>
             )
           })}
@@ -128,8 +146,12 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
+            readingTime {
+              text
+            }
           }
           frontmatter {
+            date(formatString: "DD MMMM, YYYY")
             title
             path
           }
