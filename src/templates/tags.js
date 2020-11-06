@@ -29,7 +29,9 @@ const TagsLink = styled(Link)`
   text-decoration: none;
   display: inline-block;
   position: relative;
+`
 
+const MenuLink = styled(TagsLink)`
   ::after {
     content: "";
     position: absolute;
@@ -83,7 +85,7 @@ const Tags = ({ pageContext, data }) => {
           })}
         </List>
 
-        <TagsLink to="/tags">All tags</TagsLink>
+        <MenuLink to="/tags">All tags</MenuLink>
       </Content>
     </Layout>
   )
