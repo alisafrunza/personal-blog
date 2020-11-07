@@ -57,6 +57,8 @@ export default ({ data }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        isBlogPost={true}
+        keywords={post.frontmatter.tags}
       />
       <Content>
         <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
@@ -78,6 +80,8 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM, YYYY")
         path
         title
+        description
+        tags
       }
       fields {
         readingTime {

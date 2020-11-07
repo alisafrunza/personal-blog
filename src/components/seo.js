@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, isBlogPost }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -26,6 +26,7 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const type = isBlogPost ? `article` : `website`
 
   return (
     <Helmet
@@ -49,7 +50,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: type,
         },
         {
           name: `twitter:card`,
@@ -83,6 +84,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 
 SEO.defaultProps = {
   lang: `en`,
+  isBlogPost: false,
   meta: [],
   keywords: [],
 }

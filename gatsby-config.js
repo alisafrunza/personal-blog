@@ -4,6 +4,7 @@ module.exports = {
     subtitle: `software developer`,
     description: `My trivial thoughts. Some code examples. Ruby. Rails. Dev.`,
     author: `@alisafrunza`,
+    siteUrl: `https://www.frunza.me`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
