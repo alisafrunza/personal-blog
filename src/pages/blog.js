@@ -5,6 +5,7 @@ import styled from "@emotion/styled"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import TagsLayout from "../components/tags-layout"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -59,8 +60,11 @@ const IndexPage = ({ data }) => {
               <div>
                 <ArticleDate>{node.frontmatter.date}</ArticleDate>
                 <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
+                <TagsLayout tags={node.frontmatter.tags} />
               </div>
+
               <p>{node.excerpt}</p>
+
             </div>
           ))}
       </Content>
@@ -90,6 +94,7 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             rawDate: date
             path
+            tags
           }
           fields {
             slug

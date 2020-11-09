@@ -56,7 +56,7 @@ const TagsPage = ({
     <TagsList>
       {group.map(tag => (
         <List key={tag.fieldValue}>
-          <TagsLink to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+          <TagsLink to={`/tags/${kebabCase(tag.fieldValue)}`}>
             {tag.fieldValue} ({tag.totalCount})
           </TagsLink>
         </List>

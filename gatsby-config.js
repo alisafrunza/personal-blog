@@ -70,7 +70,6 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `personal-blog`,
         icon: `src/images/red-velvet.png`, // This path is relative to the root of the site.
       },
     },
