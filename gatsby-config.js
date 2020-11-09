@@ -65,11 +65,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `personal-blog`,
-        short_name: `Alisa Frunza | Blog`,
+        name: `Alisa Frunza | Blog`,
+        short_name: `Blog`,
+        description: `My trivial thoughts. Some code examples. Ruby. Rails. Dev.`,
         start_url: `/`,
+        lang: `en`,
         background_color: `#663399`,
         theme_color: `#663399`,
+        display: `standalone`,
         icon: `src/images/red-velvet.png`, // This path is relative to the root of the site.
       },
     },
