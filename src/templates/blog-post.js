@@ -48,6 +48,16 @@ const MarkdownContent = styled.div`
   a > code:hover {
     text-decoration: underline;
   }
+
+  code.language-text {
+    background-color: #f0f0f0;
+    color: #1d1f21;
+    text-shadow: none;
+  }
+  a:hover code.language-text {
+    text-decoration: none;
+    background-color: #dbd9d9;
+  }
 `
 
 export default ({ data }) => {
