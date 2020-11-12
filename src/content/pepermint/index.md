@@ -148,7 +148,7 @@ Let’s break this down into smaller chunks. It starts with node `P-0`, adds let
 
 If put into words what is being written with code, it might look like this:
 
-```
+```bash
 It starts with node P
 It accumulates letter E.
 It goes to next iteration because neighbour P is visited.

@@ -206,7 +206,7 @@ class Api::V1::PersonalDataController < ActionController::Base
   def consumer
     @consumer ||= Consumer.find_by(secret: request.headers["HTTP_SECRET"])
   end
-````
+```
 
 Now if I make a request to `authorize` action without a secret or with a wrong one, I get an `401 Unauthorized` error.
 
@@ -227,7 +227,7 @@ Generally speaking, JWT is a Base64 encoded string that consists of three parts 
 
 The **header** specifies the token type, which is JWT, and the encryption algorithm, which is `RS256` since I decided to use public/private keys.
 
-```
+```bash
 {
   "typ": "JWT",
   "alg": "RS256"
@@ -246,7 +246,7 @@ All info we want to know about the consumer goes to the **payload** part. In our
 
 The last goes the **signature**; the formula for the signature is Base64 encoded header, Base64 encoded payload and the private key. Then all of them are signed by the RS256 algorithm. The whole signature is Base64 encoded as well.
 
-```
+```bash
 RSASHA256(
   Base64.encode64(header) + "." +
   Base64.encode64(payload),

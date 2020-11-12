@@ -45,31 +45,31 @@ gem 'rqrcode_png' # NOTE: will use it to generate QR code
 
 Afterwads, run this in your console:
 
-```
+```bash
 $ bundle install
 ```
 
 Next, you need to run Devise generator, also from the console:
 
-```
+```bash
 $ rails g devise:install
 ```
 
 Create User model:
 
-```
+```bash
 $ rails generate devise User
 ```
 
 We will only need Devise session views; to generate this run:
 
-```
+```bash
 $ rails generate devise:views -v sessions
 ```
 
 When it comes to the [`devise-two-factor`](https://github.com/tinfoil/devise-two-factor/ "Devise Two Factor gem") gem, run the following command in your console with an encryption key which will be used to encrypt all OTP secrets before you store them to the database (Note: this key has to be 32 bytes or longer):
 
-```
+```bash
 $ rails generate devise_two_factor User 32_bytes_long_example_key
 ```
 
@@ -116,7 +116,7 @@ end
 
 Since we are done with the setup, run your migrations from the console:
 
-```
+```bash
 $ rails db:migrate
 ```
 
