@@ -34,6 +34,10 @@ const ReadingTime = styled.h5`
   color: #606060;
 `
 
+const Excerpt = styled.p`
+  margin-bottom: 2.45rem;
+`
+
 const IndexPage = ({ data }) => {
   return (
     <Layout>
@@ -63,8 +67,7 @@ const IndexPage = ({ data }) => {
                 <TagsLayout tags={node.frontmatter.tags} />
               </div>
 
-              <p>{node.excerpt}</p>
-
+              <Excerpt>{node.excerpt}</Excerpt>
             </div>
           ))}
       </Content>
