@@ -9,12 +9,6 @@ import SEO from "../components/seo"
 const MarkedHeader = styled.h1`
   display: inline;
   border-radius: 1em 0 1em 0;
-  background-image: linear-gradient(
-    -100deg,
-    rgba(255, 250, 150, 0.15),
-    rgba(255, 250, 150, 0.8) 100%,
-    rgba(255, 250, 150, 0.25)
-  );
 `
 
 const Content = styled.div`
@@ -86,7 +80,9 @@ const Tags = ({ pageContext, data }) => {
       <SEO title={`${seoTitle} Posts`} />
 
       <Content>
-        <MarkedHeader>{tagHeader}</MarkedHeader>
+        <MarkedHeader className={`header-highlight`}>
+          {tagHeader}
+        </MarkedHeader>
         <List>
           {edges.map(({ node }) => {
             const { slug, readingTime } = node.fields

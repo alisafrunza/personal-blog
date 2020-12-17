@@ -13,12 +13,6 @@ const Content = styled.div`
 const MarkedHeader = styled.h1`
   display: inline;
   border-radius: 1em 0 1em 0;
-  background-image: linear-gradient(
-    -100deg,
-    rgba(255, 250, 150, 0.15),
-    rgba(255, 250, 150, 0.8) 100%,
-    rgba(255, 250, 150, 0.25)
-  );
 `
 
 const HeaderDate = styled.h3`
@@ -33,8 +27,8 @@ const MarkdownContent = styled.div`
     position: relative;
 
     background-image: linear-gradient(
-      rgba(255, 250, 150, 0.8),
-      rgba(255, 250, 150, 0.8)
+      rgba(175, 238, 238, 0.8),
+      rgba(175, 238, 238, 0.8)
     );
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
@@ -71,7 +65,7 @@ export default ({ data }) => {
         keywords={post.frontmatter.tags}
       />
       <Content>
-        <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
+        <MarkedHeader className={`header-highlight`}>{post.frontmatter.title}</MarkedHeader>
         <HeaderDate>
           {post.frontmatter.date} - {post.fields.readingTime.text}
         </HeaderDate>

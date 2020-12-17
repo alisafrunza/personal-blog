@@ -13,8 +13,8 @@ const Content = styled.div`
     position: relative;
 
     background-image: linear-gradient(
-      rgba(255, 250, 150, 0.8),
-      rgba(255, 250, 150, 0.8)
+      rgba(175, 238, 238, 0.8),
+      rgba(175, 238, 238, 0.8)
     );
     background-repeat: no-repeat;
     background-size: 100% 0.2em;

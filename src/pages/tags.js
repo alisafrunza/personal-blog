@@ -10,12 +10,6 @@ import SEO from "../components/seo"
 const MarkedHeader = styled.h1`
   display: inline;
   border-radius: 1em 0 1em 0;
-  background-image: linear-gradient(
-    -100deg,
-    rgba(255, 250, 150, 0.15),
-    rgba(255, 250, 150, 0.8) 100%,
-    rgba(255, 250, 150, 0.25)
-  );
 `
 
 const TagsList = styled.ul`
@@ -51,7 +45,7 @@ const TagsPage = ({
   <Layout>
     <SEO title="All Tags" />
 
-    <MarkedHeader>All Tags</MarkedHeader>
+    <MarkedHeader className={`header-highlight`}>All Tags</MarkedHeader>
 
     <TagsList>
       {group.map(tag => (
