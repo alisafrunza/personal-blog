@@ -44,7 +44,7 @@ const NowPage = ({ data }) => {
       <Content>
         <h1>What I’m doing now</h1>
         <HeaderDate>
-          Last updated on November 11, 2020
+          Last updated on June 15, 2021
         </HeaderDate>
 
         <ul>
@@ -52,8 +52,8 @@ const NowPage = ({ data }) => {
           <li>Working at YoungCapital as a Ruby on Rails developer.</li>
           <li>Gave up eating meat.</li>
           <li>Trying to eat vegan most of the time, which gives me the coolest possibility to discover new recipes and dishes I didn't even know about before.</li>
-          <li>Doing a <a href="https://youtu.be/NeEMs38YaBY">30-day morning yoga challenge</a>. Won't lie, some days I skip. But now I am on day 14.</li>
-          <li>Poking around Adobe Illustrator a bit. I am mesmerized by all the artwork you can create there.</li>
+          <li>Enjoying yoga at home with <a href="https://www.downdogapp.com/">Down Dog</a>.</li>
+          <li>Learning how to draw in Adobe Fresco. It is amazing how so many art tools and techniques are brought into one app.</li>
         </ul>
 
         <p style={{paddingTop: `20px`}}>
